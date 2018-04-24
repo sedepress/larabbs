@@ -15,6 +15,7 @@ class User extends Authenticatable
     use Notifiable {
         notify as protected laravelNotify;
     }
+
     public function notify($instance)
     {
         // 如果要通知的人是当前用户，就不必通知了！
@@ -31,7 +32,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'introduction', 'avatar',
+        'name', 'phone', 'email', 'password', 'introduction', 'avatar',
     ];
 
     /**
